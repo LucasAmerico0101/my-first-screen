@@ -1,16 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
+import React from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 
 export default function App() {
+  let [newTask,setNewTask] = React.useState('');
+
   return (
     <View style={styles.container}>
-      <Text style={styles.Text}>BELLA MASSA</Text>
-      <TextInput placeholder = 'Nome' style={styles.textinp}></TextInput> 
+      {/*<Text style={styles.Text}>BELLA MASSA</Text>
+      <TextInput placeholder = 'Nome' style={styles.textinp}></TextInput>
       <TextInput placeholder='Telefone'  style={styles.textinp}></TextInput>
-      <TextInput placeholder='Endereço'  style={styles.textinp}></TextInput>
-      <TouchableOpacity activeOpacity={0.7} style={styles.button}></TouchableOpacity>
+      <TextInput placeholder='Endereço'  style={styles.textinp}></TextInput>*/}
+        {/*<TouchableOpacity activeOpacity={0.7} style={styles.button}>
       <Text>Enviar</Text>
+    </TouchableOpacity>*/}
+      <Text style={styles.Text}>Lista de tarefas</Text>
+      <TextInput  onChangeText={setNewTask} placeholder = 'Tarefa' style={styles.textinp}></TextInput>
+      <Text>Items adicionados</Text>
+      <Text>{newTask}</Text>
       <StatusBar style="auto" />
     </View>
   );
