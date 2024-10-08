@@ -18,6 +18,7 @@ export default function App() {
       <Text style={styles.Text}>Lista de tarefas</Text>
       <TextInput  onChangeText={setNewTask} placeholder = 'Tarefa' style={styles.textinp}></TextInput>
       <Text>Items adicionados</Text>
+      <Text></Text>
       <Text>{newTask}</Text>
       <StatusBar style="auto" />
     </View>
